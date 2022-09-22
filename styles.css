@@ -119,29 +119,54 @@ header div {
     }
 }
 
-main section {
-    animation: fromBottom .7s backwards;
-}
+/* main section {
+    animation: leftRight .7s backwards;
+} */
 
 main section:nth-child(1) {
-    animation-delay: 0;
+    animation: leftRight .8s backwards;
+    animation-delay: .2s;
 }
 
 main section:nth-child(2) {
-    animation-delay: .4s;
+    animation: rightLeft .8s backwards;
+    animation-delay: .3s;
 }
 
 main section:nth-child(3) {
-    animation-delay: .8s;
+    animation: leftRight .8s backwards;
+    animation-delay: .2s;
 }
 
 @keyframes fromBottom {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translate(30px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes leftRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
